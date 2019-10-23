@@ -1,3 +1,5 @@
+import { PriceRoomPage } from './../pages/price-room/price-room';
+import { TypeRoomPage } from './../pages/type-room/type-room';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -13,6 +15,8 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     LoginPage,
+    TypeRoomPage,
+    PriceRoomPage,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,8 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     LoginPage,
+    TypeRoomPage,
+    PriceRoomPage,
   ],
   providers: [
     StatusBar,

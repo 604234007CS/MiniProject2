@@ -1,15 +1,15 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Login</ion-title>
+    <ion-title>ลงชื่อผู้ใช้</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-item>
-        <ion-label floating> อีเมล</ion-label>
+        <ion-label floating>อีเมล</ion-label>
         <ion-input type="e-mail" [(ngModel)]="e-mail"></ion-input>
       </ion-item>
       <ion-item>
@@ -17,9 +17,9 @@
         <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
 
-      <button ion-button block icon-lef (click)="signIn(e-mail, password)">
-          <ion-icon name="log-in"></ion-icon> &nbsp;เข้าสู่ระบบ
-        </button>
-        <h3>{{loginResult}}</h3>
+      <button ion-button block color="secondary" (click)="signIn(e-mail, password)"> เข้าสู่ระบบ </button>
+      <button ion-button block color="secondary" (click)="signUp(name,sname,e-mail, password)"> สร้างบันชีผู้ใช้ </button>
+     
 
+    
 </ion-content>

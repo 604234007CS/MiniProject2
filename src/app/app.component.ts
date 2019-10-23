@@ -1,10 +1,14 @@
+import { TypeRoomPage } from './../pages/type-room/type-room';
+import { PriceRoomPage } from './../pages/price-room/price-room';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
-
-
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -12,15 +16,16 @@ export class MyApp {
   @ViewChild(Nav) nav : Nav;
   rootPage: any = HomePage;
 
-  pages: Array<{ title: string, component: any, icon: any }>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform : Platform, public statusBar : StatusBar, public splashScreen : SplashScreen) {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'Login', component: HomePage, icon: 'key' },
-
+      { title: 'ประเภทห้องเช่า', component: TypeRoomPage},
+      { title: 'เปรียบเทียบราคาห้องเช่า', component: PriceRoomPage},
+      { title: 'ลงชื่อเข้าใช้', component: LoginPage},
+      
     ];
     }
     
