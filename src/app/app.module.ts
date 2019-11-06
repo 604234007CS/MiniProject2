@@ -1,3 +1,5 @@
+import { SignOutPage } from './../pages/sign-out/sign-out';
+
 import { PriceRoomPage } from './../pages/price-room/price-room';
 import { TypeRoomPage } from './../pages/type-room/type-room';
 import { LoginPage } from './../pages/login/login';
@@ -17,6 +19,7 @@ import { HomePage } from '../pages/home/home';
     LoginPage,
     TypeRoomPage,
     PriceRoomPage,
+    SignOutPage,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { HomePage } from '../pages/home/home';
     LoginPage,
     TypeRoomPage,
     PriceRoomPage,
+    SignOutPage,
   ],
   providers: [
     StatusBar,

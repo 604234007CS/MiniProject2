@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PriceRoomPage page.
+ * Generated class for the SignOutPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-price-room',
-  templateUrl: 'price-room.html',
+  selector: 'page-sign-out',
+  templateUrl: 'sign-out.html',
 })
-export class PriceRoomPage {
+export class SignOutPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PriceRoomPage');
-  }
-
-  Home(){
-    this.navCtrl.push("HomePage");
+    console.log('ionViewDidLoad SignOutPage');
   }
 
 }

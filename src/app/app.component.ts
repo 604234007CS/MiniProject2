@@ -1,3 +1,4 @@
+
 import { TypeRoomPage } from './../pages/type-room/type-room';
 import { PriceRoomPage } from './../pages/price-room/price-room';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +26,7 @@ export class MyApp {
       { title: 'ประเภทห้องเช่า', component: TypeRoomPage},
       { title: 'เปรียบเทียบราคาห้องเช่า', component: PriceRoomPage},
       { title: 'ลงชื่อเข้าใช้', component: LoginPage},
-      
+  
     ];
     }
     

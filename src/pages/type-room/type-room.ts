@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -38,5 +39,8 @@ export class TypeRoomPage {
     this.navCtrl.push("DormPage");
   }
 
+  Login(){
+    this.navCtrl.push(LoginPage);
+  }
 }
 
