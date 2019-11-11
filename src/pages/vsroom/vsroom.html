@@ -1,0 +1,54 @@
+<!--
+  Generated template for the VsroomPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>vsroom</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item> 
+        <ion-label color = "secondary">เลือกห้องเช่า</ion-label>
+        <ion-select [(ngModel)]="result.room1">
+          <ion-option *ngFor = "let get of value" value={{get.rentedroom_name}}>{{get.rentedroom_name}}</ion-option>
+        </ion-select> 
+  </ion-item>
+  
+  <ion-note>กับ</ion-note>
+  
+  <ion-item> 
+      <ion-label color = "secondary">เลือกห้องเช่า</ion-label>
+      <ion-select [(ngModel)]="rerult.room2" >
+        <ion-option *ngFor = "let get of value" value={{get.rentedroom_name}}>{{get.rentedroom_name}}</ion-option>
+      </ion-select> 
+  </ion-item>
+  <button ion-button (click) ="getroomview()">เปรียบเทียบ</button>
+  
+  <ion-card>
+  <ion-card-content *ngFor="let show of showroom1">
+    <p><b>ชื่อห้องเช่า :</b>{{show.rentedroom_name}}</p>
+    <p><b>ราคา :</b>{{show.price}}</p>
+    <p><b>ที่อยู่ :</b>{{show.rentedroom_address}}</p>
+    <p><b>ประเภทห้องเช่า :</b>{{show.type_name}}</p> 
+    <p><b>จำกัดเพศของผู้เช่า :</b>{{show.restrict_gender}}</p>
+    <p><b>เบอร์ติดต่อ :</b>{{show.rentedroom_phone}}</p>
+  </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+      <ion-card-content *ngFor="let show of showroom2">
+        <p><b>ชื่อห้องเช่า :</b>{{show.rentedroom_name}}</p>
+        <p><b>ราคา :</b>{{show.price}}</p>
+        <p><b>ที่อยู่ :</b>{{show.rentedroom_address}}</p>
+        <p><b>ประเภทห้องเช่า :</b>{{show.type_name}}</p> 
+        <p><b>จำกัดเพศของผู้เช่า :</b>{{show.restrict_gender}}</p>
+        <p><b>เบอร์ติดต่อ :</b>{{show.rentedroom_phone}}</p>
+      </ion-card-content>
+      </ion-card>
+</ion-content>

@@ -11,26 +11,24 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
-        <ion-label floating>ชื่อ</ion-label>
-        <ion-input type="" [(ngModel)]="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>นามสกุล</ion-label>
-        <ion-input type="" [(ngModel)]="sname"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>อีเมล</ion-label>
-        <ion-input type="e-mail" [(ngModel)]="e-mail"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>รหัสผ่าน</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
 
-  <button ion-button block color="secondary" (click)="register()"> ลงทะเบียน </button>
-  <button ion-button block color="secondary" (click)="Login()"> เข้าสู่ระบบ </button>
-  <button ion-button block color="secondary" (click)="Cancel()"> ยกเลิก </button>
+    <ion-card-content>
+        <ion-list>
+            <ion-item><ion-input placeholder="ชื่อ" [(ngModel)]="name"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="นามสกุล" [(ngModel)]="sname"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="อีเมล" [(ngModel)]="email"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="ชื่อผู้ใช้" [(ngModel)]="username"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="รหัสผ่าน" [(ngModel)]="password"></ion-input></ion-item>
+            
+          </ion-list>
+        
+          
+          <button ion-button round full color="secondary" (click)="register(username)">ลงทะเบียน</button>
+          <button ion-button round full color="secondary" (click)="Login()">เข้าสู่ระบบ</button>
+          <button ion-button round full color="secondary" (click)="Cancel()">ยกเลิก</button>
+    </ion-card-content>
 
+
+   
 
 </ion-content>

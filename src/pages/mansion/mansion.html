@@ -6,12 +6,27 @@
 -->
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title >Mansion</ion-title>
+    <ion-title >เเมนชั่น</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
-    
+    <ion-item *ngFor="let room of rentedroom" (click)="getdetail(room)">
+            <ion-thumbnail item-left>
+          <img src="assets/imgs/{{room.namepic}}.jpg">
+      </ion-thumbnail>
+      <h2><b>{{room.rentedroom_name}}</b></h2>
+      <p>{{room.rentedroom_address}}</p>
+      <h2 ion-text color="primary">ราคา {{room.price}} บาท</h2>
+      
+    </ion-item>
+
+    <ion-fab below right edge>
+        <button ion-fab color="secondary"><ion-icon name="funnel"></ion-icon></button>
+        <ion-fab-list side="bottom">
+          <button ion-fab (click) = price() ><ion-icon name="logo-bitcoin"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab> 
 </ion-content>

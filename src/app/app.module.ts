@@ -1,6 +1,10 @@
-import { SignOutPage } from './../pages/sign-out/sign-out';
+import { VsroomPage } from './../pages/vsroom/vsroom';
 
-import { PriceRoomPage } from './../pages/price-room/price-room';
+import { RoomDetialPage } from './../pages/room-detial/room-detial';
+import { InsertDormPage } from './../pages/insert-dorm/insert-dorm';
+
+
+
 import { TypeRoomPage } from './../pages/type-room/type-room';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +15,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoaddataProvider } from '../providers/loaddata/loaddata';
+import { HttpModule } from '@angular/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,12 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     LoginPage,
     TypeRoomPage,
-    PriceRoomPage,
-    SignOutPage,
-  ],
+    VsroomPage,
+    InsertDormPage,RoomDetialPage
+  
+  ],  
   imports: [
-    BrowserModule,
+    BrowserModule,HttpModule,HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,13 +39,16 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     LoginPage,
     TypeRoomPage,
-    PriceRoomPage,
-    SignOutPage,
+    VsroomPage,
+    InsertDormPage,RoomDetialPage
+    
+   
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoaddataProvider
   ]
 })
 export class AppModule {}

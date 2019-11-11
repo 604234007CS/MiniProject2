@@ -15,6 +15,10 @@ import { LoginPage } from '../login/login';
   templateUrl: 'sing-up.html',
 })
 export class SingUpPage {
+  username:string;
+  password:string;
+  repassword:string;
+  loginResult;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,8 +26,21 @@ export class SingUpPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SingUpPage');
   }
+  
 
   Cancel(){
     this.navCtrl.push(LoginPage);
+  }
+
+  register(_username){
+    console.log("Username: "+ this.username);
+    console.log("Password: "+ this.password);
+    alert('Hello' + _username);
+    if(this.username.length==0 || this.password.length==0 || this.password.length==0) {
+      this.loginResult = 'Pass';
+      this.navCtrl.push("LoginPage");
+    } else {
+      this.loginResult = 'Fall';
+    }
   }
 }

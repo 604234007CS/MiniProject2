@@ -6,11 +6,20 @@
 -->
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title>Apartment</ion-title>
+    <ion-title>อพาร์ทเมนท์</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     
+    <ion-item *ngFor="let room of rentedroom" (click)="getdetail(room)">
+      <ion-thumbnail item-left>
+          <img src="assets/imgs/{{room.namepic}}.jpg">
+      </ion-thumbnail>
+      <h2><b>{{room.rentedroom_name}}</b></h2>
+      <p>{{room.rentedroom_address}}</p>
+      <h2 ion-text color="primary">ราคา {{room.price}} บาท</h2>
+      
+    </ion-item>
 </ion-content>

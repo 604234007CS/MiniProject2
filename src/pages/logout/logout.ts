@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the SignOutPage page.
+ * Generated class for the LogoutPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-sign-out',
-  templateUrl: 'sign-out.html',
+  selector: 'page-logout',
+  templateUrl: 'logout.html',
 })
-export class SignOutPage {
+export class LogoutPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignOutPage');
+    console.log('ionViewDidLoad LogoutPage');
   }
 
 }

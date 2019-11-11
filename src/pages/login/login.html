@@ -8,17 +8,20 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
-        <ion-label floating>อีเมล</ion-label>
-        <ion-input type="e-mail" [(ngModel)]="e-mail"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>รหัสผ่าน</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
-
-      <button ion-button block color="secondary" (click)="signIn(e-mail, password)"> เข้าสู่ระบบ </button> 
-      <button ion-button block color="secondary" (click)="signUp(name,sname,e-mail, password)"> สร้างบันชีผู้ใช้ </button>
-      
     
+    <ion-card-content>
+        <ion-item >
+          <ion-label>ชื่อผู้ใช้</ion-label>
+            <ion-input type="text" value= "" [(ngModel)]="logindata.username" ></ion-input>
+        </ion-item>
+        <ion-item >
+            <ion-label>รหัสผ่าน</ion-label>
+            <ion-input type="password" value= "" [(ngModel)]="logindata.password"></ion-input>
+        </ion-item>
+        
+        <button ion-button round full color ="secondary" (click)="Login()">เข้าสู่ระบบ</button>
+        <button ion-button round full color="secondary" (click)="signUp()">สร้างบันชีผู้ใช้</button>
+      </ion-card-content>
+
 </ion-content>
+

@@ -1,6 +1,10 @@
+import { VsroomPage } from './../pages/vsroom/vsroom';
+
+import { InsertDormPage } from './../pages/insert-dorm/insert-dorm';
+
 
 import { TypeRoomPage } from './../pages/type-room/type-room';
-import { PriceRoomPage } from './../pages/price-room/price-room';
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
@@ -21,15 +25,20 @@ export class MyApp {
 
   constructor(public platform : Platform, public statusBar : StatusBar, public splashScreen : SplashScreen) {
     this.initializeApp();
+     
 
     this.pages = [
       { title: 'ประเภทห้องเช่า', component: TypeRoomPage},
-      { title: 'เปรียบเทียบราคาห้องเช่า', component: PriceRoomPage},
-      { title: 'ลงชื่อเข้าใช้', component: LoginPage},
-  
+      { title: 'เปรียบเทียบราคาห้องเช่า', component: VsroomPage},
+      { title: 'ลงชื่อเข้าใช้', component: LoginPage}, 
+      { title: 'เพิ่มห้องเช่า', component: InsertDormPage}
     ];
-    }
     
+     
+  
+
+  }
+
     initializeApp() {
       this.platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
