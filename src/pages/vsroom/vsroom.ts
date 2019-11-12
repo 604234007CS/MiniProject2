@@ -1,3 +1,4 @@
+import { Http } from '@angular/http';
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -17,13 +18,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class VsroomPage {
 
   rerult:any={};
-  value;
+  value:any={};
   showroom1:any=[];
   showroom2:any=[];
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public keyapi:LoaddataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public keyapi:LoaddataProvider ,public Http:Http) {
      this.rerult.room1 ="";
     this.rerult.room2 =""; 
   }
@@ -51,5 +52,6 @@ export class VsroomPage {
 } 
 
 } 
+
 
 }
