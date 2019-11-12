@@ -24,14 +24,27 @@
     <ion-label floating>ราคา THB</ion-label>
     <ion-input type = "text"></ion-input>
   </ion-item>
+  
   <ion-item >
-      <ion-label floating>ประเภทห้องเช่า</ion-label>
-      <ion-input type = "text"></ion-input>
+      
+      <ion-label>ประเภทห้องเช่า</ion-label>
+    <ion-select [(ngModel)]="result.type">
+      <ion-option value="1">คอนโนมิเนียม</ion-option>
+      <ion-option value="2">อพาร์ทเม้นท์</ion-option>
+      <ion-option value="3">แมนชัน</ion-option>
+      <ion-option value="4">หอพัก</ion-option>
+    </ion-select>
     </ion-item>
-    <ion-item >
-        <ion-label floating>จำกัดเพศของผู้เช่า</ion-label>
-        <ion-input type = "text"></ion-input>
+
+    <ion-item>
+        <ion-label>จำกัดเพศผู้เช่า</ion-label>
+        <ion-select [(ngModel)]="result.restrict_gender">
+          <ion-option value="หญิง">หญิง</ion-option>
+          <ion-option value="ชาย">ชาย</ion-option>
+          <ion-option value="ไม่จำกัด">ไม่จำกัด</ion-option>
+        </ion-select>
       </ion-item>
+      
     <ion-item >
           <ion-label floating>เบอร์ติดต่อ</ion-label>
           <ion-input type = "text"></ion-input>

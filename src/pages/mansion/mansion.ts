@@ -48,4 +48,6 @@ export class MansionPage {
       this.loaddata();
   }
 }
+
+
 }

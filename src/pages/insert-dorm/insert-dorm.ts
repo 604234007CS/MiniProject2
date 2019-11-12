@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'insert-dorm.html',
 })
 export class InsertDormPage {
-
+  result:any={};
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -25,4 +25,6 @@ export class RoomDetialPage {
     console.log(this.roomdata);
   }
 
+
+  
 }
