@@ -50,6 +50,22 @@ export class LoaddataProvider {
     return this.http.get(url);
   }
 
+  
+  loadprice_1(){
+    let url = "http://localhost/todoslim3/public/room3000"
+  return this.http.get(url);
+  }
+
+  loadprice_2(){
+    let url = "http://localhost/todoslim3/public/room3001"
+    return this.http.get(url);
+    }
+  
+
+  loadprice_3(){
+    let url = "http://localhost/todoslim3/public/room4000"
+  return this.http.get(url);
+  }
 
 }
 
